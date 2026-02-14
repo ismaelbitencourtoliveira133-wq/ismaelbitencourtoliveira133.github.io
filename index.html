@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MASTEDEV STORE</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#0c0c0c;color:white;}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:#111;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+}
+
+.logo{font-size:22px;font-weight:bold;}
+.logo span{color:#ff7b00;}
+
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:#ccc;
+cursor:pointer;
+}
+nav a:hover{color:#ff7b00;}
+
+.section{
+display:none;
+padding:70px 40px;
+text-align:center;
+}
+.section.active{display:block;}
+
+.section h1{
+margin-bottom:20px;
+font-size:32px;
+}
+
+.subinfo{
+color:#aaa;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#151515;
+padding:25px;
+width:280px;
+border-radius:12px;
+transition:0.3s;
+position:relative;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+text-align:left;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border:1px solid #ff7b00;
+box-shadow:0 0 15px rgba(255,123,0,0.5);
+}
+
+.badge{
+position:absolute;
+top:10px;
+right:10px;
+background:#ff7b00;
+padding:4px 8px;
+font-size:12px;
+border-radius:5px;
+}
+
+.status{
+font-size:13px;
+color:#00ff88;
+margin-bottom:5px;
+}
+
+.estrelas{
+color:gold;
+margin:5px 0;
+}
+
+.price{
+font-size:20px;
+color:#00ff88;
+margin:10px 0;
+}
+
+.card ul{
+font-size:13px;
+color:#aaa;
+margin:10px 0;
+padding-left:18px;
+}
+
+.ticket-btn{
+display:block;
+background:#5865F2;
+color:white;
+padding:10px;
+text-align:center;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+}
+.ticket-btn:hover{background:#4752C4;}
+
+.benefits{
+margin-top:50px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.benefit{
+background:#141414;
+padding:20px;
+width:220px;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+color:#666;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Maste<span>dev</span></div>
+<nav>
+<a onclick="showSection('inicio')">Início</a>
+<a onclick="showSection('gm')">GameModes</a>
+<a onclick="showSection('sistemas')">Sistemas</a>
+<a onclick="showSection('mappers')">Mappers</a>
+<a onclick="showSection('sites')">Sites</a>
+<a onclick="showSection('contato')">Contato</a>
+</nav>
+</header>
+
+<section id="inicio" class="section active">
+<h1>LOJA PROFISSIONAL SA-MP</h1>
+<p class="subinfo">Produtos exclusivos para elevar seu servidor ao máximo nível.</p>
+
+<div class="benefits">
+<div class="benefit">
+<h3>⚡ Entrega Rápida</h3>
+<p>Receba seu produto no mesmo dia.</p>
+</div>
+<div class="benefit">
+<h3>🛠 Suporte 24h</h3>
+<p>Atendimento direto no Discord.</p>
+</div>
+<div class="benefit">
+<h3>🔒 Seguro</h3>
+<p>Compra 100% segura via ticket.</p>
+</div>
+</div>
+</section>
+
+<section id="gm" class="section">
+<h1>GAME MODES</h1>
+<p class="subinfo">Bases completas e profissionais para seu servidor.</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="badge">Popular</div>
+<div class="status">🟢 Disponível</div>
+<h3>GM RP Premium</h3>
+<div class="estrelas">★★★★★</div>
+<ul>
+<li>Sistema Banco</li>
+<li>Facções</li>
+<li>Empregos</li>
+<li>VIP</li>
+<li>Anti-Cheat</li>
+</ul>
+<div class="price">R$200</div>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Abrir Ticket</a>
+</div>
+
+<div class="card">
+<div class="status">🟢 Atualizado</div>
+<h3>GM Base Editável</h3>
+<div class="estrelas">★★★★☆</div>
+<ul>
+<li>Login/Register</li>
+<li>Sistema Admin</li>
+<li>Base Limpa</li>
+</ul>
+<div class="price">R$90</div>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Abrir Ticket</a>
+</div>
+
+</div>
+</section>
+
+<section id="sistemas" class="section">
+<h1>SISTEMAS SA-MP</h1>
+<p class="subinfo">Sistemas separados para integrar na sua GM.</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="badge">Novo</div>
+<div class="status">🟢 Disponível</div>
+<h3>Sistema Banco</h3>
+<div class="estrelas">★★★★★</div>
+<ul>
+<li>Depósito</li>
+<li>Saque</li>
+<li>Transferência</li>
+<li>Logs</li>
+</ul>
+<div class="price">R$40</div>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Abrir Ticket</a>
+</div>
+
+<div class="card">
+<div class="status">🟢 Disponível</div>
+<h3>Sistema Inventário</h3>
+<div class="estrelas">★★★★☆</div>
+<ul>
+<li>Itens configuráveis</li>
+<li>Sistema de peso</li>
+<li>Salvar automático</li>
+</ul>
+<div class="price">R$35</div>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Abrir Ticket</a>
+</div>
+
+</div>
+</section>
+
+<section id="mappers" class="section">
+<h1>MAPPERS PROFISSIONAIS</h1>
+<p class="subinfo">Mapas otimizados e exclusivos.</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="badge">Premium</div>
+<div class="status">🟢 Disponível</div>
+<h3>Cidade Exclusiva</h3>
+<div class="estrelas">★★★★★</div>
+<ul>
+<li>Mapa customizado</li>
+<li>Interiores únicos</li>
+<li>Otimização FPS</li>
+</ul>
+<div class="price">R$120</div>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Abrir Ticket</a>
+</div>
+
+</div>
+</section>
+
+<section id="sites" class="section">
+<h1>SITES PARA SERVIDOR</h1>
+<p class="subinfo">Sites modernos com integração total.</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="badge">Mais Vendido</div>
+<div class="status">🟢 Disponível</div>
+<h3>Site Profissional + Loja</h3>
+<div class="estrelas">★★★★★</div>
+<ul>
+<li>Página moderna</li>
+<li>Loja integrada</li>
+<li>Ranking automático</li>
+<li>Painel admin</li>
+</ul>
+<div class="price">R$250</div>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Abrir Ticket</a>
+</div>
+
+</div>
+</section>
+
+<section id="contato" class="section">
+<h1>CONTATO</h1>
+<p>Discord: Servidor oficial</p>
+<p>Atendimento via ticket</p>
+<p>Horário: 08:00 às 23:00</p>
+<a href="https://discord.com/channels/1383581320109752340/1463941869170855976" target="_blank" class="ticket-btn">Ir para Ticket</a>
+</section>
+
+<footer>
+© 2026 MASTEDEV - Todos os direitos reservados
+</footer>
+
+<script>
+function showSection(id){
+document.querySelectorAll('.section').forEach(sec=>{
+sec.classList.remove('active');
+});
+document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
